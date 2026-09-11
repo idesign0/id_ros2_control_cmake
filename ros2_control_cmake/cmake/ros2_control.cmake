@@ -75,6 +75,7 @@ macro(set_compiler_options)
         -Wthread-safety
         -Wno-unused-const-variable  # for gmock
         -Wno-gnu-zero-variadic-macro-arguments  # deactivate for pal_statistics
+        -Wno-error=conversion  # Apple clang -Wconversion (sign/float) is far stricter than gcc; keep conversions as warnings on macOS
       )
     endif()
   endif()
